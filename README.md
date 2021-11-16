@@ -39,10 +39,9 @@ Your challenge is to build out a simple match list of upcoming esports matches a
 
 ## Ideas to test yourself
 
-- Write your styles using a pre-processor, such as Sass, Less or Stylus
 - Train your eye for detail by getting your solution as close to the design as you can
 - Populate the bet slip with `contract` selections from the match list
-- Make the design responsive for smaller devices
+- Make the layout responsive for smaller devices
 
 ## Developer Notes
 
