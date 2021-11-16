@@ -28,14 +28,21 @@ yarn lint
 ```
 
 
-## Exercise
+## Challenge Breif
 
-Below is a preview of what we'd like to see recreated, we have provided a [Figma](https://figma.com/) link to the original design where you can inspect and interact with the design elements. If you're not familiar with Figma, it's the design tool used by our designers, and is frequently used by our frontend engineers during asset hand-off and implementation.
+Your challenge is to build out a simple match list of upcoming esports matches and get it looking as close to the original design as possible. Below is a preview of what we'd like to see recreated, we have provided a [Figma](https://figma.com/) link to the original design where you can inspect and interact with the design elements. If you're not familiar with Figma, it's the design tool used by our designers, and is frequently used by our frontend engineers during asset hand-off and implementation.
 
 [https://www.figma.com/file/nby4r7Eecn4xMlyF8aK07k/Code-Exercise](https://www.figma.com/file/nby4r7Eecn4xMlyF8aK07k/Code-Exercise)
 
 ![Upcoming Matches](https://firebasestorage.googleapis.com/v0/b/clover-f2488.appspot.com/o/document-images%2Ff4b3c7208d125ff56eaf4a60d6aac5dbcb46692f?alt=media&token=b65812a3-3715-4d5e-8919-e4e615eed866)
 
+
+## Ideas to test yourself
+
+- Write your styles using a pre-processor, such as Sass, Less or Stylus
+- Train your eye for detail by getting your solution as close to the design as you can
+- Populate the bet slip with `contract` selections from the match list
+- Make the design responsive for smaller devices
 
 ## Developer Notes
 
