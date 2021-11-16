@@ -17,7 +17,7 @@
         </h2>
         <p class="mt-3 text-carbon-200">
           We recommend you take a look at the
-          <a href="https://nuxtjs.org" target="_blank" class="text-purple-500 hover:underline">guide</a> if you've not done so before
+          <a href="https://github.com/mattgaunt/challenge#readme" target="_blank" class="text-purple-500 hover:underline">readme</a> if you've not done so before
           getting started.
         </p>
         <p class="mt-4 pt-4 text-carbon-200 border-t border-dashed border-carbon-300">
