@@ -28,7 +28,7 @@ yarn lint
 ```
 
 
-## Challenge Breif
+## Brief
 
 Your challenge is to build out a simple match list of upcoming esports matches and get it looking as close to the original design as possible. Below is a preview of what we'd like to see recreated, we have provided a [Figma](https://figma.com/) link to the original design where you can inspect and interact with the design elements. If you're not familiar with Figma, it's the design tool used by our designers, and is frequently used by our frontend engineers during asset hand-off and implementation.
 
