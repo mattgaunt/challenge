@@ -1,0 +1,28 @@
+<template>
+  <svg :width="width" :height="height" :viewBox="viewBox" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.38122 0L12.24 8.84082L19.5527 0H24.5682L22.0506 18H17.7992L19.3273 7.06286L11.3829 16.7167H11.0008L5.76 7.06286L4.23184 18H0L2.51755 0H7.38122ZM25.2441 18H29.4956L32.018 0H27.7666L25.2441 18ZM35.3437 0L32.8213 18H45.9625L49.1364 15.5461L50.9584 2.47347L48.485 0H35.3437ZM45.1543 13.4988L44.8164 13.7486H37.685L39.0123 4.25143H46.1437L46.4131 4.47673L45.1543 13.4988ZM57.2523 0L64.3642 9.49714L65.6915 0H69.9429L67.4254 18H64.565L57.1397 7.73878L55.6801 18H51.4482L53.9707 0H57.2523ZM70.6187 18H74.8701L77.3925 0H73.1362L70.6187 18ZM79.8027 0H94.8786L94.2712 4.25143H88.8688L86.9341 18H82.6827L84.6173 4.25143H79.1953L79.8027 0ZM94.0508 18H109.102L109.71 13.7486H98.9096L99.272 11.1135H109.396L110.003 6.84245H99.8793L100.237 4.25143H111.037L111.62 0H96.5683L94.0508 18Z" fill="#ffffff"></path>
+  </svg>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  name: 'MidniteLogo',
+  props: {
+    width: {
+      type: Number,
+      default: 112,
+    },
+    height: {
+      type: Number,
+      default: 18
+    },
+  },
+  computed: {
+    viewBox () {
+      return `0 0 ${this.width} ${this.height}`
+    }
+  }
+})
+</script>
