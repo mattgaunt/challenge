@@ -9,6 +9,7 @@ import Vue from 'vue'
 import MidniteLogo from '@/components/MidniteLogo.vue'
 
 export default Vue.extend({
+  name: 'LayoutTopbar',
   components: {
     MidniteLogo
   }
