@@ -1,17 +1,25 @@
 <template>
-  <div id="app">
+  <div id="app" class="h-full min-h-screen flex flex-col flex-grow bg-carbon-700">
     <layout-topbar />
-    <router-view />
+    <div class="flex flex-row flex-nowrap flex-grow">
+      <layout-sidebar />
+      <router-view class="flex-auto" />
+      <layout-betslip />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import LayoutTopbar from '@/components/LayoutTopbar.vue'
+import LayoutSidebar from '@/components/LayoutSidebar.vue'
+import LayoutBetslip from '@/components/LayoutBetslip.vue'
 
 export default Vue.extend({
   components: {
-    LayoutTopbar
+    LayoutTopbar,
+    LayoutSidebar,
+    LayoutBetslip
   }
 })
 </script>
