@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-      <div class="w-1/5 text-right">
+      <div class="w-1/5 flex flex-col justify-center text-right">
         {{ match_start_time  }}
         <div class="text-xs">
           {{ match_day }}
