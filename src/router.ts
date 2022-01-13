@@ -9,7 +9,7 @@ Vue.use(Router)
 const router = new Router({
   mode: 'history',
   routes: [
-	{ path: '/', component: Home },
+	{ path: '*', component: Home },
 	{ path: '/matches', name: 'matches', component: Matches, props: true },
   ],
 })

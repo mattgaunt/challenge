@@ -1,11 +1,14 @@
 <template>
   <nav class="bg-carbon-800">
     <ol class="w-60 px-2 py-3">
-      <li
+      <component
+        :is="item.to ? 'router-link' : 'li'"
         v-for="(item, index) in items"
+        tag="li"
         :key="index"
-        class="flex items-center h-12 p-3 text-white"
-        :class="[item.class, item.type]"
+        :to="item.to || ''"
+        class="flex items-center h-12 p-3 text-white cursor-pointer"
+        :class="item.type"
       >
         <div class="flex-grow">{{ item.label }}</div>
         <div
@@ -13,7 +16,7 @@
           v-text="item.count"
           class="rounded-lg py-1 px-3 font-medium text-xs text-green-400 bg-carbon-600 "
         />
-      </li>
+      </component>
     </ol>
   </nav>
 </template>
@@ -29,17 +32,19 @@ export default Vue.extend({
         {
           type: 'link',
           label: 'Upcoming',
-          class: 'active'
+          to: '/matches',
         },
         {
           type: 'link',
           label: 'In-Play',
+          to: '/in-play',
           count: 2,
         },
         {
           type: 'link',
           label: 'Odds Boost',
           class: 'promoted',
+          to: '/odds-boost',
         },
         {
           type: 'heading',
@@ -48,10 +53,12 @@ export default Vue.extend({
         {
           type: 'link',
           label: 'Counter-Strike',
+          to: '/esports/counter-strike',
         },
         {
           type: 'link',
           label: 'Football',
+          to: '/sports/football',
         }
       ]
     }
@@ -65,7 +72,7 @@ export default Vue.extend({
   color: var(--color-carbon-200);
 }
 
-.active {
+.router-link-active {
   background-color: var(--color-carbon-500);
   border-radius: 12px;
 }

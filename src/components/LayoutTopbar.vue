@@ -1,6 +1,8 @@
 <template>
   <header class="flex items-center h-16 px-4 bg-carbon-700 border-b border-off-black">
-    <MidniteLogo />
+    <router-link to="/">
+      <MidniteLogo />
+    </router-link>
   </header>
 </template>
 
