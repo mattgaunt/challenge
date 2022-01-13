@@ -52,6 +52,7 @@
 
 <script>
 import Vue from "vue";
+import store from '@/store.js';
 
 export default Vue.extend({
   name: "UpcomingMatch",
@@ -103,7 +104,7 @@ export default Vue.extend({
   },
   methods: {
     contractPick (contract) {
-      this.$emit('contract:pick', {
+      store.bets.push({
         contract,
         home_team: this.home_team,
         away_team: this.away_team
