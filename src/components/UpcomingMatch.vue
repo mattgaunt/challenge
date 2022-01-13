@@ -30,7 +30,12 @@
         {{ market.name }}
       </div>
       <div class="flex flex-grow">
-        <div v-for="(contract, index) in market.contracts" :key="index" class="flex-col flex-grow text-center bg-carbon-400 hover:bg-carbon-300 cursor-pointer rounded-lg ml-2 py-3 items-center w-2/4">
+        <div
+          v-for="(contract, index) in market.contracts"
+          :key="index"
+          class="flex-col flex-grow text-center bg-carbon-400 hover:bg-carbon-300 cursor-pointer rounded-lg ml-2 py-3 items-center w-2/4"
+          @click="contractPick(contract)"
+        >
           <div class="text-white text-xs">{{ contract.name }}</div>
           <div class="text-purple-500 text-base font-bold">
             {{ contract.price }}
@@ -45,7 +50,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
 
 export default Vue.extend({
@@ -94,6 +99,15 @@ export default Vue.extend({
     },
     match_day () {
       return new Date(this.start_time).toLocaleString('en-GB', {weekday:'short'});
+    }
+  },
+  methods: {
+    contractPick (contract) {
+      this.$emit('contract:pick', {
+        contract,
+        home_team: this.home_team,
+        away_team: this.away_team
+      })
     }
   }
 });
