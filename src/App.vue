@@ -1,19 +1,24 @@
 <template>
   <div id="app">
+    <layout-header />
     <router-view />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import LayoutHeader from '@/components/LayoutHeader.vue'
 
 export default Vue.extend({
-  //
+  components: {
+    LayoutHeader
+  }
 })
 </script>
 
 <style lang="scss">
 :root {
+  --color-off-black: #161a20;
   --color-carbon-100: #C0C3C7;
   --color-carbon-200: #878E97;
   --color-carbon-300: #4B5159;
