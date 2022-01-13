@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      <div v-if="num_markets" class="num_markets flex flex-shrink text-purple-500 text-sm items-center font-bold pl-2">
+      <div v-if="num_markets" class="num_markets flex flex-shrink text-purple-500 text-sm items-center font-bold pl-4">
         +{{ num_markets - 1 }}
       </div>
     </div>
@@ -117,6 +117,6 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
   .num_markets {
-    min-width: 35px;
+    min-width: 45px;
   }
 </style>
