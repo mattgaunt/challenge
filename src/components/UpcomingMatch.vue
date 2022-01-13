@@ -25,7 +25,21 @@
         </div>
       </div>
     </div>
-    <div class="w-2/4"></div>
+    <div class="w-2/4 flex flex-wrap pl-2">
+      <div class="w-full text-center pb-4">
+        {{ market.name }}
+      </div>
+      <div v-for="(contract, index) in market.contracts" :key="index" class="flex-col flex-grow text-center bg-carbon-400 hover:bg-carbon-300 cursor-pointer rounded-lg ml-2 py-3 items-center">
+        <div class="text-white text-xs">{{ contract.name }}</div>
+        <div class="text-purple-500 text-base font-bold">
+          {{ contract.price }}
+        </div>
+      </div>
+      <div v-if="num_markets" class="flex flex-shrink text-purple-500 text-sm items-center font-bold pl-2">
+        +{{ num_markets - 1 }}
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24" aria-labelledby="star" role="presentation" aria-label="Favourite" class="text-carbon-200 hover:text-yellow-400 cursor-pointer relative top right"><g fill="currentColor"><path d="M10.9271 3.09466L8.48599 8.04418L3.02432 8.84044C2.04488 8.9825 1.65235 10.19 2.36263 10.8816L6.31403 14.732L5.37945 20.1712C5.21123 21.1544 6.24674 21.8909 7.11403 21.4311L12 18.8628L16.886 21.4311C17.7533 21.8871 18.7888 21.1544 18.6206 20.1712L17.686 14.732L21.6374 10.8816C22.3476 10.19 21.9551 8.9825 20.9757 8.84044L15.514 8.04418L13.0729 3.09466C12.6355 2.21242 11.3682 2.20121 10.9271 3.09466Z"></path></g></svg>
   </div>
 </template>
 
@@ -65,6 +79,10 @@ export default Vue.extend({
     },
     away_image_url: {
       type: String,
+      required: true,
+    },
+    num_markets: {
+      type: Number,
       required: true,
     },
   },
