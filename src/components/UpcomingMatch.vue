@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="w-2/4 flex flex-wrap pl-2">
-      <div class="w-full text-center pb-4">
+      <div class="w-full text-center pb-4 pr-8">
         {{ market.name }}
       </div>
       <div class="flex flex-grow">
