@@ -30,17 +30,12 @@
         {{ market.name }}
       </div>
       <div class="flex flex-grow">
-        <div
+        <match-contract
           v-for="(contract, index) in market.contracts"
           :key="index"
-          class="flex-col flex-grow text-center bg-carbon-400 hover:bg-carbon-300 cursor-pointer rounded-lg ml-2 py-2 items-center w-2/4"
-          @click="contractPick(contract)"
-        >
-          <div class="text-white text-xs">{{ contract.name }}</div>
-          <div class="text-purple-500 text-base font-bold">
-            {{ contract.price }}
-          </div>
-        </div>
+          v-bind="contract"
+          @click.native="contractPick(contract)"
+        />
       </div>
       <div v-if="num_markets" class="num_markets flex flex-shrink text-purple-500 text-sm items-center font-bold pl-4">
         +{{ num_markets - 1 }}
@@ -53,9 +48,13 @@
 <script>
 import Vue from "vue";
 import store from '@/store.js';
+import MatchContract from "@/components/MatchContract.vue"
 
 export default Vue.extend({
   name: "UpcomingMatch",
+  components: {
+    MatchContract
+  },
   props: {
     competition_name: {
       type: String,
@@ -104,6 +103,12 @@ export default Vue.extend({
   },
   methods: {
     contractPick (contract) {
+      let index = store.bets.findIndex(bets => bets.contract.id === contract.id)
+      if (index !== -1) {
+        this.$delete(store.bets, index)
+        return
+      }
+
       store.bets.push({
         contract,
         home_team: this.home_team,
