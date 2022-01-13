@@ -1,6 +1,6 @@
 <template>
-  <aside class="flex bg-carbon-800">
-    <h1>Bet Slip</h1>
+  <aside class="flex p-4 bg-carbon-800">
+    <h1 class="text-base text-white font-medium">Bet Slip</h1>
   </aside>
 </template>
 
