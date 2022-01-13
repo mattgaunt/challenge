@@ -8,9 +8,12 @@
     </div>
     <div class="p-4 bg-carbon-500 rounded-lg">
       <h1 v-if="loading">Loading...</h1>
-      <div v-else v-for="(match, index) in matches" :key="index">
-        <pre class="text-xs">{{ match }}</pre>
-      </div>
+      <upcoming-match
+        v-else
+        v-for="(match, index) in matches"
+        :key="index"
+        v-bind="match"
+      />
     </div>
   </div>
 </template>
@@ -18,8 +21,13 @@
 <script lang="ts">
 import Vue from 'vue'
 import axios from 'axios'
+import UpcomingMatch from "@/components/UpcomingMatch.vue"
 
 export default Vue.extend({
+  name: 'Matches',
+  components: {
+    UpcomingMatch
+  },
   data () {
     return {
       matches: [],
@@ -29,7 +37,7 @@ export default Vue.extend({
   beforeMount () {
     axios.get('https://api.midnite.com/v0/matches/upcoming')
       .then(response => {
-        this.matches = response.data
+        this.matches = response.data.data
       })
       .finally(() => {
         this.loading = false;
