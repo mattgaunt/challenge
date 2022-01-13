@@ -107,7 +107,8 @@ export default Vue.extend({
       store.bets.push({
         contract,
         home_team: this.home_team,
-        away_team: this.away_team
+        away_team: this.away_team,
+        market_name: this.market.name,
       })
     }
   }
