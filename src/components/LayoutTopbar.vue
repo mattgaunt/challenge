@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center px-4 bg-carbon-700 border-b border-off-black">
+  <header class="flex items-center h-16 px-4 bg-carbon-700 border-b border-off-black">
     <MidniteLogo />
   </header>
 </template>
@@ -15,9 +15,3 @@ export default Vue.extend({
   }
 })
 </script>
-
-<style lang="scss" scoped>
-  header {
-    height: 65px;
-  }
-</style>
