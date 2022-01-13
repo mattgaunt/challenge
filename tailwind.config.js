@@ -37,6 +37,10 @@ module.exports = {
       }
     }
   },
-  variants: {},
+  variants: {
+    extend: {
+      borderWidth: ['last'],
+    }
+  },
   plugins: []
 }

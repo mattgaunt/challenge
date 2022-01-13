@@ -6,8 +6,8 @@
         Upcoming
       </h1>
     </div>
-    <div class="p-4 bg-carbon-500 rounded-lg">
-      <h1 v-if="loading">Loading...</h1>
+    <div class="bg-carbon-500 rounded-lg">
+      <h1 v-if="loading" class="p-4">Loading...</h1>
       <upcoming-match
         v-else
         v-for="(match, index) in matches"
