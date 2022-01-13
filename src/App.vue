@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <layout-header />
+    <layout-topbar />
     <router-view />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import LayoutHeader from '@/components/LayoutHeader.vue'
+import LayoutTopbar from '@/components/LayoutTopbar.vue'
 
 export default Vue.extend({
   components: {
-    LayoutHeader
+    LayoutTopbar
   }
 })
 </script>
