@@ -33,7 +33,7 @@
         <div
           v-for="(contract, index) in market.contracts"
           :key="index"
-          class="flex-col flex-grow text-center bg-carbon-400 hover:bg-carbon-300 cursor-pointer rounded-lg ml-2 py-3 items-center w-2/4"
+          class="flex-col flex-grow text-center bg-carbon-400 hover:bg-carbon-300 cursor-pointer rounded-lg ml-2 py-2 items-center w-2/4"
           @click="contractPick(contract)"
         >
           <div class="text-white text-xs">{{ contract.name }}</div>
